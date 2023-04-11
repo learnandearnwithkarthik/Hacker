@@ -41,12 +41,9 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 @Client.on_message(filters.command("start") & filters.private)
 @private_use
 async def start(c: Client, m: Message):
-    print(m)
-    print(m.text)
-    if len(m.text.split()) >=2 and m.text.split()[1].startswith("api"):
+    if len(m.command) >=2 and m.text.split()[1].startswith("api"):
         api_key = m.text.split()[1].split("_")[1]
         user_id = m.from_user.id
-        print(api_key)
         if await is_user_exist(user_id):
             user = await get_user(user_id)
             if user["shortener_api"] is not None:
@@ -565,7 +562,6 @@ async def account_handler(c: Client, m: Message):
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
-    print(api_key)
     try:
         async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=100)) as session:
             async with session.get(f"{base_url}{api_key}") as resp:
@@ -612,7 +608,6 @@ async def status_handler(c: Client, m: Message):
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
-    print(api_key)
     try:
         async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=100)) as session:
             async with session.get(f"{base_url}{api_key}") as resp:
