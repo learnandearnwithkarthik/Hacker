@@ -148,7 +148,7 @@ async def restart_handler(c: Client, m: Message):
         ]
     )
     await m.reply(
-        "Are You Sure You Want To Restart / Re-Deploy The Server?",
+        "Are You Sure You Want To Restart/Re-Deploy The Server ?",
         reply_markup=RESTARTE_MARKUP,
     )
 
@@ -243,7 +243,7 @@ async def header_handler(bot, m: Message):
         await m.reply("Header Text Updated Successfully")
     elif "remove" in cmd:
         await update_user_info(user_id, {"header_text": ""})
-        return await m.reply("Header Text Successfully Removed")
+        return await m.reply("Header Text Removed Successfully")
     else:
         return await m.reply(
             HEADER_MESSAGE
@@ -267,7 +267,7 @@ async def footer_handler(bot, m: Message):
             )
 
         await update_user_info(user_id, {"footer_text": ""})
-        return await m.reply("Footer Text Successfully Removed")
+        return await m.reply("Footer Text Removed Successfully")
     elif m.reply_to_message.text:
         footer_text = m.reply_to_message.text.html
         await update_user_info(user_id, {"footer_text": footer_text})
@@ -286,7 +286,7 @@ async def username_handler(bot, m: Message):
     elif len(cmd) == 2:
         if "remove" in cmd:
             await update_user_info(user_id, {"username": ""})
-            return await m.reply("Username Successfully Removed")
+            return await m.reply("Username Removed Successfully")
         else:
             username = cmd[1].strip().replace("@", "")
             await update_user_info(user_id, {"username": username})
@@ -313,14 +313,14 @@ async def banner_image_handler(bot, m: Message):
     elif len(cmd) == 2:
         if "remove" in cmd:
             await update_user_info(user_id, {"banner_image": ""})
-            return await m.reply("Banner Image Successfully Removed")
+            return await m.reply("Banner Image Removed Successfully")
         else:
             image_url = cmd[1].strip()
             valid_image_url = await extract_link(image_url)
             if valid_image_url:
                 await update_user_info(user_id, {"banner_image": image_url})
                 return await m.reply_photo(
-                    image_url, caption="Banner Image Updated s\Successfully"
+                    image_url, caption="Banner Image Updated Successfully"
                 )
 
             else:
@@ -334,7 +334,7 @@ async def base_site_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     site = user["base_site"]
-    text = f"`/base_site (base_site)`\n\nCurrent Base Site: {site}\n\n EX: `/base_site shareus.in`\n\nAvailable Base Sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
+    text = f"`/base_site (base_site)`\n\nCurrent Base Site : {site}\n\n EX: `/base_site shareus.in`\n\nAvailable Base Sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
@@ -440,7 +440,7 @@ async def exclude_domain_handler(bot, m: Message):
             domain_list_cmd = "".join(cmd).strip().split(",")
             domain_list = list(set(domain_list_cmd + list(ex_domain)))
         x = await update_user_info(m.from_user.id, {"exclude_domain": domain_list})
-        return await m.reply("Updated Exclude d\Domain List Successfully")
+        return await m.reply("Updated Exclude Domain List Successfully")
     except Exception as e:
         logging.exception(e, exc_info=True)
         return await m.reply("Some Error Updating Exclude Domain List")
@@ -466,7 +466,7 @@ async def banned_user_handler(c: Client, m: Message):
                             user_id, "You Are Now Banned From The Bot By Admin"
                         )
                     await m.reply(
-                        f"User [`{user_id}`] Has Been Banned From The Bot. To Unban. `/unban {user_id}`"
+                        f"User [`{user_id}`] Has Been Banned From The Bot. To Unban, `/unban {user_id}`"
                     )
 
                 else:
@@ -558,7 +558,7 @@ async def account_handler(c: Client, m: Message):
     if await is_user_exist(user_id) is True:
         user = await get_user(user_id)
         if user["shortener_api"] is None:
-            await m.reply_text("You haven't connected you account yet!")
+            await m.reply_text("You Haven't Connected Your LinkShortify API Yet !")
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
@@ -580,19 +580,21 @@ async def account_handler(c: Client, m: Message):
 ➡️ Withdrawal Account: - {withdrawal_account}
 
 🔗 Referral Link: - {share_url}
+
+👇 Click Here To Share Your Referral Link 👇
 **
 """
         await m.reply_text(message_to_be_sent, reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👇 Click Here To Share Your Referral Link 👇",
+                    InlineKeyboardButton("Share Referral Link",
                     url=f"https://t.me/share/url?url={share_url}")
                 ]
             ]))
         
         return
     except TimeoutError:
-        m.reply_text("Something went wrong\nTry again later!")
+        m.reply_text("Something Went Wrong\nTry Again Later !")
     except Exception:
         traceback.print_exc()
     return
@@ -604,7 +606,7 @@ async def status_handler(c: Client, m: Message):
     if await is_user_exist(user_id) is True:
         user = await get_user(user_id)
         if user["shortener_api"] is None:
-            await m.reply_text("You haven't connected you account yet!")
+            await m.reply_text("You Haven't Connected Your LinkShortify API Yet !")
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
@@ -625,17 +627,17 @@ async def status_handler(c: Client, m: Message):
 
 ✅ Available Balance: - {available_balance}
 
-👇🏻Click Hear To Withdraw Your Earnings 👇🏻**
+👇🏻 Click Hear To Withdraw Your Earnings 👇🏻**
 """
         await m.reply_text(message_to_be_sent, reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Take Withdrawal",
+                    InlineKeyboardButton("Take Withdrawal Now",
                     url=f"http://linkshortify.com/member/withdraws")
                 ]
             ]))
         return
     except TimeoutError:
-            m.reply_text("Something went wrong\nTry again later!")
+            m.reply_text("Something Went Wrong\nTry Again Later !")
     except Exception:
             traceback.print_exc()
