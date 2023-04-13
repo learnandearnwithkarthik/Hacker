@@ -75,7 +75,7 @@ async def batch_handler(c: Client, m: CallbackQuery):
     elif m.data.startswith("batch"):
         if lock.locked():
             return await m.answer(
-                "Wait Until Previous Process Complete.", show_alert=True
+                "Wait Until Previous Process Complete", show_alert=True
             )
 
         channel_id = int(m.data.split("#")[1])
