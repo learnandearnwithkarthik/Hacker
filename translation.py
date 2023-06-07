@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 BATCH_MESSAGE = BATCH = """**💠 I Will Short All Your Channels Link With MoneyCase. Make Me Admin In Your Channel Withh All Rights And Follow Steps.
 
-➡️ Example : `/batch linkshortify`
+➡️ Example : `/batch Moneycase`
 
 ⚠️ You Can Also Use Channel ID Instead Of Channel Username
 
@@ -35,28 +35,28 @@ HELP_MESSAGE = """**💠 Hey Welcome To LinkShortify Bot, I Have Many eatures To
 ➡️ Batch Conversion For Channels
 ➡️ Channel Support For Admins Only
 
-🔰 For Support Contact Here @BrixFylSupport**"""
+🔰 For Support Contact Here @Playitlinksofficial**"""
 
 ABOUT_TEXT = """
 **💠 About Us 💠
 
 🔰 I Am : LinkShortify RoBot
 
-🔰 Our Support  : [Whatsapp](https://wa.me/917990556806) & [Telegram](https://t.me/brixflysupport)
+🔰 Our Support  : [Whatsapp]() & [Telegram](https://t.me/moneycaseadmin)
 
-🔰 Official Channel : @LinkShortify
+🔰 Official Channel : @Moneycaseofficial
 
-🔰 Payment Proof : [Click Here](https://linkshortify.com/pages/payment-proofs)
+🔰 Payment Proof : [Click Here](https://moneycase.link)
 
-❤️ Made With Love By LinkShortify ❤️**
+❤️ Made With Love By Moneycase ❤️**
 """
 
 
 METHOD_MESSAGE = """💠 Methods Available :
 
-➡️ `Mdisk + Shortener (MDLINK)` - Change All The Links Of The Post To Your MDisk Account First And Then Short To LinkShortify Link.
+➡️ `Mdisk + Shortener (MDLINK)` - Change All The Links Of The Post To Your MDisk Account First And Then Short To Moneycase Link.
 
-➡️ `Shortener` - Short All The Links Of The Post To LinkShortify Link Directly.
+➡️ `Shortener` - Short All The Links Of The Post To Moneycase Link Directly.
     
 **👉 Current Method :** {method}
     
@@ -149,7 +149,7 @@ USER_ABOUT_MESSAGE = """
 
 ➡️ Method :** {method}
 
-**➡️ LinkShortify API :** {shortener_api}
+**➡️ MoneyCase API :** {shortener_api}
 
 **➡️ Mdisk API :** {mdisk_api}
 
@@ -175,15 +175,15 @@ MDISK_API_MESSAGE = """💠 To Add Or Update Your Mdisk API,
 
 ⚙️ Hit `/settings` To Control Your Settings"""
 
-SHORTENER_API_MESSAGE = """To Add Or Update Your LinkShortify API,
+SHORTENER_API_MESSAGE = """To Add Or Update Your Moneycase API,
             
 **➡️ Example :** `/api 6LZq851sXofffPHugiKQq`
 
-⚠️ Get Your LinkShortify API From [Here](https://linkshortify.com/member/tools/api)
+⚠️ Get Your MoneyCase API From [Here](https://Moneycase.link/member/tools/api)
 
-**🔴 To Remove LinkShortify API :** `/api remove`
+**🔴 To Remove Moneycase API :** `/api remove`
 
-**👉 Current LinkShortify API :** `{shortener_api}`
+**👉 Current Moneycase API :** `{shortener_api}`
 
 ⚙️ Hit `/settings` To Control Your Settings"""
 
@@ -209,7 +209,7 @@ FOOTER_MESSAGE = """💠 To Set The Footer Text For Every Message Caption Or Tex
 
 USERNAME_TEXT = """💠 To Replace Specific Username From Post.
 
-**➡️ Example :** `/username linkshortify`
+**➡️ Example :** `/username Moneycase`
 
 **🔴 To Remove The Username :** `/username remove`
 
@@ -219,7 +219,7 @@ USERNAME_TEXT = """💠 To Replace Specific Username From Post.
 
 BANNER_IMAGE = """💠 To Replace The Image From Post.
 
-**➡️ Example :** /banner_image https://linkshortify.com/logo/white-green.png
+**➡️ Example :** /banner_image https://Moneycase.link/logo.png
 
 ⚠️ You Can Also Reply To Any Image With `/banner_image` To Set It As Banner Image.
 
