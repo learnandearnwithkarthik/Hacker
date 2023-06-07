@@ -35,7 +35,7 @@ ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
  
 #  Optionnal variables
 LOG_CHANNEL = int(
-    os.environ.get("LOG_CHANNEL", "-1001249000599")
+    os.environ.get("LOG_CHANNEL", "-1001840955187")
 )  # log channel for information about users
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", True)  # For Force Subscription
 BROADCAST_AS_COPY = is_enabled(
