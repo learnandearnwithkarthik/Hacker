@@ -24,10 +24,10 @@ HELP_MESSAGE = """**💠 Hey Welcome To LinkShortify Bot, I Have Many eatures To
 
 👉 Here Is The List Of My Features :
 
-➡️ LinkShortify Detailed Balance
+➡️ Moneycase Detailed Balance
 ➡️ HyperLink And Hidden Link Support
 ➡️ Button Conversion Support
-➡️ Your LinkShortify Account Infomation
+➡️ Your Moneycase Account Infomation
 ➡️ Domain Inclusion And Exclusion Options
 ➡️ Header And Footer Text Support
 ➡️ Replace Username Function
@@ -40,7 +40,7 @@ HELP_MESSAGE = """**💠 Hey Welcome To LinkShortify Bot, I Have Many eatures To
 ABOUT_TEXT = """
 **💠 About Us 💠
 
-🔰 I Am : LinkShortify RoBot
+🔰 I Am : Moneycase RoBot
 
 🔰 Our Support  : [Whatsapp]() & [Telegram](https://t.me/moneycaseadmin)
 
