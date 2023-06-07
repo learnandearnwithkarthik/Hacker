@@ -383,7 +383,7 @@ async def set_commands(app):
         BotCommand("help", "To Get Help About Bot"),
         BotCommand("about", "To Get Information About The Bot"),
         BotCommand("method", "To Set/Change Your Method"),
-        BotCommand("api", "To Set LinkShortify API"),
+        BotCommand("api", "To Set MoneyCase API"),
         BotCommand("mdisk_api", "To Set MDisk API."),
         BotCommand("header", "To Set The Header."),
         BotCommand("footer", "To Set the footer."),
