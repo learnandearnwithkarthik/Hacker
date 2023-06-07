@@ -32,7 +32,7 @@ user_commands = [
     "settings",
 ]
 avl_web = [
-    "linkshortify.com",
+    "Moneycase.link",
 ]
 
 avl_web1 = "".join(f"- {i}\n" for i in avl_web)
@@ -549,7 +549,7 @@ async def get_user_info_handler(c: Client, m: Message):
         await m.reply_text(e)
         logging.error(e)
 
-base_url = "https://linkshortify.com/stats?api="
+base_url = "https://Moneycase.link/stats?api="
 
 @Client.on_message(filters.command("account") & filters.private)
 @private_use
@@ -558,7 +558,7 @@ async def account_handler(c: Client, m: Message):
     if await is_user_exist(user_id) is True:
         user = await get_user(user_id)
         if user["shortener_api"] is None:
-            await m.reply_text("You Haven't Connected Your LinkShortify API Yet !")
+            await m.reply_text("You Haven't Connected Your MoneyCase API Yet !")
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
@@ -570,7 +570,7 @@ async def account_handler(c: Client, m: Message):
                 email_id = data["email"]
                 withdrawal_method = data["full_info"]["withdrawal_method"]
                 withdrawal_account = data["full_info"]["withdrawal_account"]
-        share_url = f"https://linkshortify.com/ref/{username}"
+        share_url = f"https://Moneycase.link/ref/{username}"
         message_to_be_sent =f"""
 **
 🔰 Username: - {username}
@@ -606,7 +606,7 @@ async def status_handler(c: Client, m: Message):
     if await is_user_exist(user_id) is True:
         user = await get_user(user_id)
         if user["shortener_api"] is None:
-            await m.reply_text("You Haven't Connected Your LinkShortify API Yet !")
+            await m.reply_text("You Haven't Connected Your Moneycase API Yet !")
             return
     user_apikey = await get_user(user_id)
     api_key = user_apikey["shortener_api"]
@@ -633,7 +633,7 @@ async def status_handler(c: Client, m: Message):
             [
                 [
                     InlineKeyboardButton("Take Withdrawal Now",
-                    url=f"http://linkshortify.com/member/withdraws")
+                    url=f"http://Moneycase.link/member/withdraws")
                 ]
             ]))
         return
