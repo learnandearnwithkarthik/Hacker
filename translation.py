@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-BATCH_MESSAGE = BATCH = """**💠 I Will Short All Your Channels Link With LinkShortify. Make Me Admin In Your Channel Withh All Rights And Follow Steps.
+BATCH_MESSAGE = BATCH = """**💠 I Will Short All Your Channels Link With MoneyCase. Make Me Admin In Your Channel Withh All Rights And Follow Steps.
 
 ➡️ Example : `/batch linkshortify`
 
