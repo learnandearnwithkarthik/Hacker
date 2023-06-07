@@ -38,7 +38,7 @@ HELP_MESSAGE = """**💠 Hey Welcome To LinkShortify Bot, I Have Many eatures To
 🔰 For Support Contact Here @Playitlinksofficial**"""
 
 ABOUT_TEXT = """
-**💠 About Us 💠
+**My Details:**
 
 🔰 I Am : Moneycase RoBot
 
@@ -52,7 +52,7 @@ ABOUT_TEXT = """
 """
 
 
-METHOD_MESSAGE = """💠 Methods Available :
+METHOD_MESSAGE = """
 
 ➡️ `Mdisk + Shortener (MDLINK)` - Change All The Links Of The Post To Your MDisk Account First And Then Short To Moneycase Link.
 
@@ -62,7 +62,7 @@ METHOD_MESSAGE = """💠 Methods Available :
     
 Click Below Button To Set/Change Method :"""
 
-CUSTOM_ALIAS_MESSAGE = """💠 To Use Custom Alias Feature
+CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
 
 **🔴 Format : [link] | [alias]**
 
